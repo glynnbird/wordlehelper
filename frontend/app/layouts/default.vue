@@ -1,6 +1,11 @@
 <script setup>
    const { search } = useWordList()
 </script>
+<style>
+.inputword {
+font-family: monospace, monospace; 
+}
+</style>
 <template>
   <v-app theme="light">
     <v-app-bar density="compact" extended extension-height="70">
@@ -9,7 +14,7 @@
         <v-row>
           <v-col cols="1"></v-col>
           <v-col cols="10">
-             <v-text-field clearable placeholder="Search" v-model="search"></v-text-field>
+             <v-text-field class="inputword" maxlength="5" clearable placeholder="Search" v-model="search"></v-text-field>
           </v-col>
           <v-col cols="1"></v-col>
         </v-row>

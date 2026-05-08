@@ -23,7 +23,8 @@ export default function () {
     if (search.value.length != 5) {
       return []
     }
-    const lcsearch = search.value.toLowerCase()
+    let lcsearch = search.value.toLowerCase()
+    lcsearch = lcsearch.replace(/[^a-z]/g,' ')
     const arr1 = solutions.filter(function(s) {
       return isMatch(s, lcsearch)
     })

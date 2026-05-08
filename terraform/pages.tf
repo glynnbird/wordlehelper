@@ -14,7 +14,7 @@ resource "cloudflare_pages_project" "frontend_project" {
     type = "github"
     config = {
       owner                         = "glynnbird"
-      repo_name                     = "wordle"
+      repo_name                     = "wordlehelper"
       production_branch             = "main"
     }
   }
